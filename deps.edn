@@ -1,0 +1,17 @@
+;; /deps.edn
+
+{:paths ["tools"]
+
+ :deps {org.clojure/clojure {:mvn/version "1.10.1"}
+        org.clojure/core.async {:mvn/version "0.5.527"}}
+
+ :aliases {:maincore {:extra-paths ["core"]
+                      :extra-deps
+                      {org.clojure/core.async {:mvn/version "0.5.527"}}}
+           :dev {:extra-paths ["core"]
+                 :extra-deps
+                 {org.clojure/tools.cli {:mvn/version "0.4.2"}
+                  org.clojure/core.async {:mvn/version "0.5.527"}
+                  nrepl/nrepl {:mvn/version "0.6.0"}
+                  refactor-nrepl {:mvn/version "2.4.0"}
+                  cider/cider-nrepl {:mvn/version "0.22.4"}}}}}
